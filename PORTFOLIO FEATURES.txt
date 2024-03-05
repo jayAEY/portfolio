@@ -1,0 +1,21 @@
+/* PORTFOLIO FEATURES
+ 
+- group css styles ✔️
+- animation for expanding project?✔️
+- make all links open in new window ✔️
+- add indication that overlay leads to project?✔️
+- reverse hover animations✔️
+- add non web projects✔️
+- finish adding graphics projects info and images✔️
+- lightbox feature for images?✔️
+- handle graphics images behavior✔️
+- add conditionals for live site and github links✔️
+- edit graphics images?
+- about me section for non web dev?
+- webring type of section? or just section on things
+- filtering component?✖️✔️
+- fix scroll behavior or make lightbox appear wherever clicked
+- change line widths to min-content?✖️
+- fix shadow cut off at bottom✖️
+- esc button functionality?✔️
+ */

@@ -1,52 +1,50 @@
-const Project = ({
-  name,
-  desc,
-  mobileimage,
-  desktopimage,
-  liveurl,
-  github,
-  projectClick,
-  lineAnimation,
-}) => {
+const Project = (props) => {
   function projectHover(elem, overOrOut) {
     if (overOrOut == "over") {
       elem.style.background = `
       linear-gradient(rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)),
-      url("${mobileimage}")
+      url("${props.mobileimage}")
       `;
       elem.style.backgroundPosition = "center";
       elem.style.backgroundSize = "cover";
     } else if (overOrOut == "out") {
-      elem.style.background = `url("${mobileimage}")`;
+      elem.style.background = `url("${props.mobileimage}")`;
       elem.style.backgroundPosition = "center";
       elem.style.backgroundSize = "cover";
     }
   }
   return (
     <div
-      className="project"
-      id={name}
-      alt={`Screenshot of ${name}`}
+      className={`project ${
+        props.projectsLabel == "web-filter" ? "web" : "graphics"
+      }`}
+      id={props.name}
+      alt={`Screenshot of ${props.name}`}
       style={{
-        background: `url("${mobileimage}")`,
+        background: `url("${props.mobileimage}")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
       onMouseOver={(e) => {
         projectHover(e.target, "over");
-        lineAnimation(e.target);
+        props.lineAnimation(e.target);
       }}
       onMouseOut={(e) => projectHover(e.target, "out")}
-      onClick={(e) => projectClick(e.target)}
-      name={name}
-      desc={desc}
-      mobileimage={mobileimage}
-      desktopimage={desktopimage}
-      liveurl={liveurl}
-      github={github}
+      onClick={(e) => props.projectClick(e.target)}
+      onKeyUp={(e) => e.key == "Enter" && props.projectClick(e.target)}
+      name={props.name}
+      desc={props.desc}
+      mobileimage={props.mobileimage}
+      desktopimage={props.desktopimage}
+      extraimages={props.extraimages}
+      liveurl={props.liveurl}
+      github={props.github}
+      title={props.name}
+      aria-label={props.name}
+      tabIndex={props.tab}
     >
-      <h2>{name}</h2>
+      <h2>{props.name}</h2>
     </div>
   );
 };

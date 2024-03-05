@@ -1,56 +1,46 @@
 import Project from "./project";
 import ProjectExpanded from "./projectExpanded";
-import data from "./projects-info.json";
 
 const Projects = (props) => {
-  const { lineAnimation, clicked, setClicked } = props;
-
-  function projectClick(elem) {
-    if (clicked == "") {
-      let elemProps = {
-        name: elem.getAttribute("name"),
-        desc: elem.getAttribute("desc"),
-        mobileimage: elem.getAttribute("mobileImage"),
-        desktopimage: elem.getAttribute("desktopimage"),
-        liveurl: elem.getAttribute("liveurl"),
-        github: elem.getAttribute("github"),
-      };
-      setClicked(elemProps);
-    } else {
-      setClicked("");
-    }
-  }
-
-  let projectsReturn = Object.entries(data).map((e) => (
+  let projectsReturn = Object.entries(props.data).map((e, i) => (
     <Project
-      projectClick={projectClick}
       name={e[1].name}
       key={e[1].name}
       desc={e[1].desc}
       mobileimage={e[1].mobileimage}
       desktopimage={e[1].desktopimage}
+      extraimages={e[1].extraimages}
       liveurl={e[1].liveurl}
       github={e[1].github}
-      lineAnimation={lineAnimation}
+      lineAnimation={props.lineAnimation}
+      projectsLabel={props.projectsLabel}
+      projectClick={props.projectClick}
+      tab={i + 7}
     />
   ));
-
   let expandedReturn = (
     <ProjectExpanded
-      projectClick={projectClick}
-      name={clicked.name}
-      desc={clicked.desc}
-      mobileimage={clicked.mobileimage}
-      desktopimage={clicked.desktopimage}
-      liveurl={clicked.liveurl}
-      github={clicked.github}
-      lineAnimation={lineAnimation}
+      name={props.clicked.name}
+      desc={props.clicked.desc}
+      mobileimage={props.clicked.mobileimage}
+      desktopimage={props.clicked.desktopimage}
+      extraimages={props.clicked.extraimages}
+      liveurl={props.clicked.liveurl}
+      github={props.clicked.github}
+      lineAnimation={props.lineAnimation}
+      projectsLabel={props.projectsLabel}
+      projectClick={props.projectClick}
+      imgClick={props.imgClick}
+      lightboxActive={props.lightboxActive}
     />
   );
 
   return (
-    <section id="projects">
-      {clicked == "" ? projectsReturn : expandedReturn}
+    <section
+      id="projects"
+      className={props.projectsLabel}
+    >
+      {props.clicked == "" ? projectsReturn : expandedReturn}
     </section>
   );
 };
