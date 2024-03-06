@@ -165,7 +165,8 @@ header a:hover::before,
 
 #link-icons {
   display: flex;
-  gap: 20px;
+  padding-left: 1px;
+  gap: 19px;
   margin-top: 12.2px;
 }
 

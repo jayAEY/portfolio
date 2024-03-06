@@ -3,9 +3,10 @@ import Projects from "./projects.jsx";
 
 import { AiOutlineClose } from "react-icons/ai";
 import {
-  FaCodepen,
   FaEnvelope,
   FaGithub,
+  FaFreeCodeCamp,
+  FaCodepen,
   FaArrowLeft,
   FaArrowRight,
 } from "react-icons/fa";
@@ -203,11 +204,20 @@ function App() {
               <FaGithub title="Github" />
             </a>
             <a
+              href="https://www.freecodecamp.org/jayAEY"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="FreeCodeCamp"
+              tabIndex={3}
+            >
+              <FaFreeCodeCamp title="FreeCodeCamp" />
+            </a>
+            <a
               href="https://codepen.io/jayAEY/"
               target="_blank"
               rel="noopener noreferrer"
               title="CodePen"
-              tabIndex={3}
+              tabIndex={4}
             >
               <FaCodepen title="CodePen" />
             </a>
@@ -216,7 +226,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
               title="Replit"
-              tabIndex={4}
+              tabIndex={5}
             >
               <SiReplit title="Replit" />
             </a>
