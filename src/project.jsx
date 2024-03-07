@@ -42,7 +42,7 @@ const Project = (props) => {
       github={props.github}
       title={props.name}
       aria-label={props.name}
-      tabIndex={props.tab}
+      tabIndex={0}
     >
       <h2>{props.name}</h2>
     </div>
