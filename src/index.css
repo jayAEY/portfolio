@@ -80,7 +80,7 @@ header h1 {
 }
 
 h2 {
-  font-size: 28pt;
+  font-size: 26pt;
   font-weight: 900;
 }
 
@@ -216,6 +216,7 @@ nav button {
   justify-content: center;
   flex-wrap: wrap;
   transition: var(--animation-general);
+  animation: var(--animation-slide-in);
 }
 
 .tech-filter {
@@ -245,7 +246,7 @@ nav button {
   padding: 0 10px;
   justify-items: center;
   transition: var(--animation-general);
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 }
 
 .projects-label {
@@ -280,6 +281,18 @@ nav button {
   cursor: pointer;
   transition: var(--animation-general);
   animation: var(--animation-slide-in);
+}
+
+.section-text {
+  text-align: center;
+  grid-column: 1 / -1;
+  max-width: 350px;
+  margin: 20px 0;
+  animation: var(--animation-slide-in);
+}
+
+.section-name {
+  font-size: 24pt;
 }
 
 .project:hover {
@@ -396,7 +409,7 @@ nav button {
   position: relative;
   color: var(--yellow);
   position: relative;
-  font-size: 10vw;
+  /* font-size: 10vw; */
   font-weight: 900;
   line-height: 01;
   z-index: 0;
@@ -470,7 +483,7 @@ footer .link-icons {
 }
 
 @media screen and (min-width: 500px) {
-  .project-expand h2 {
-    font-size: 40pt;
-  }
+  /* .project-expand h2 { */
+  /* font-size: 40pt; */
+  /* } */
 }

@@ -1,5 +1,9 @@
 export const webData = [
   {
+    section: "Web Applications",
+    desc: "Fully dynamic web pages for various interactive functions. Made with technologies, features and libraries like Vite React, various APIs, localStorage, Day.js, and shadcn/ui.",
+  },
+  {
     name: "Game App",
     desc: "App that allows for keeping a video game backlog and completion list. Also allows for searching and displaying info on games. Made with RAWG.io API - API for game info. Made with React, Tailwind CSS, Vite, shadcn/ui, TypeScript",
     mobileimage: "./web/game app mobile.png",
@@ -44,7 +48,7 @@ export const webData = [
   },
   {
     name: "Github User Display",
-    desc: "App that displays github user info. Allows for searching. Allows for inputting and saving spending and balance data. Made with vanilla HTML, CSS, JavaScript and the Github REST API",
+    desc: "App that displays github user info. Allows for searching. Made with vanilla HTML, CSS, JavaScript and the Github REST API",
     mobileimage: "./web/github user display mobile.png",
     desktopimage: "./web/github user display desktop.png",
     liveurl: "https://jayaey.github.io/github-user-display/",
@@ -61,14 +65,19 @@ export const webData = [
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
   },
   {
-    name: "Job Filtering Component",
-    desc: "Responsive web page that displays job listings with a filters them according to selected keywords. Made entirely with vanilla HTML, CSS and JavaScript.",
-    mobileimage: "./web/job filtering mobile.png",
-    desktopimage: "./web/job filtering desktop.png",
-    liveurl: "https://jayaey.github.io/job-listings-with-filtering/",
-    github: "https://github.com/jayAEY/job-listings-with-filtering",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    name: "Quote Generator",
+    desc: "Advice generator app that retrieves random advice from an API. Made entirely with vanilla HTML, CSS and JavaScript",
+    mobileimage: "./web/quote generator mobile.png",
+    desktopimage: "./web/quote generator desktop.png",
+    liveurl: "https://jayaey.github.io/advice-generator/",
+    github: "https://github.com/jayAEY/advice-generator",
+    technologies: ["HTML", "CSS", "JavaScript", "API"],
   },
+  {
+    section: "Misc Components",
+    desc: "These projects focused on specific features that could be used in bigger projects. Features included a filtered display, a unique navbar hover menu, and a countdown animated display with a fireworks animation.",
+  },
+
   {
     name: "Countdown Clock",
     desc: "Responsive web page with animated countdown timer. Made with mostly vanilla HTML, CSS and JavaScript. GSAP and canvas-confetti were used for the animations.",
@@ -78,10 +87,18 @@ export const webData = [
     github: "https://github.com/jayAEY/launch-countdown-timer",
     technologies: ["HTML", "CSS", "JavaScript", "API", "GSAP"],
   },
-
+  {
+    name: "Hover Menu",
+    desc: "Landing Page with a menu that shows when you hover over a nav link. Made with vanilla HTML, CSS and JavaScript",
+    mobileimage: "./web/hover menu mobile.png",
+    desktopimage: "./web/hover menu desktop.png",
+    liveurl: "https://jayaey.github.io/ondeck-landing-page/",
+    github: "https://github.com/jayAEY/ondeck-landing-page",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
   {
     name: "Rating Component",
-    desc: "Responsive web page for a rating component. Allows for giving ratings and diplaying an average rating based on localStorage data. Made entirely with vanilla HTML, CSS and JavaScript",
+    desc: "Responsive web page for a rating component. Allows for giving ratings and displaying an average rating based on localStorage data. Made entirely with vanilla HTML, CSS and JavaScript",
     mobileimage: "./web/rating component mobile.png",
     desktopimage: "./web/rating component desktop.png",
     liveurl: "https://jayaey.github.io/interactive-rating-component/",
@@ -89,13 +106,27 @@ export const webData = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    name: "Quote Generator",
-    desc: "Advice generator app that retrieves random advice from an API. Made entirely with vanilla HTML, CSS and JavaScript",
-    mobileimage: "./web/quote generator mobile.png",
-    desktopimage: "./web/quote generator desktop.png",
-    liveurl: "https://jayaey.github.io/advice-generator/",
-    github: "https://github.com/jayAEY/advice-generator",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
+    name: "Job Filtering Component",
+    desc: "Responsive web page that displays job listings with a filters them according to selected keywords. Made entirely with vanilla HTML, CSS and JavaScript.",
+    mobileimage: "./web/job filtering mobile.png",
+    desktopimage: "./web/job filtering desktop.png",
+    liveurl: "https://jayaey.github.io/job-listings-with-filtering/",
+    github: "https://github.com/jayAEY/job-listings-with-filtering",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
+
+  {
+    name: "Social Links Display",
+    desc: "Social media reference landing page made with vanilla HTML, CSS",
+    mobileimage: "./web/social links display mobile.png",
+    desktopimage: "./web/social links display desktop.png",
+    liveurl: "https://jayaey.github.io/social-links-profile/",
+    github: "https://github.com/jayAEY/social-links-profile",
+    technologies: ["HTML", "CSS"],
+  },
+  {
+    section: "Layouts",
+    desc: "Webpages that display various layouts, either for the full pages, or specific parts of them. These projects were typically designed focused and were meant to display various design possibilities ",
   },
   {
     name: "Room Landing Page",
@@ -106,9 +137,10 @@ export const webData = [
     github: "https://github.com/jayAEY/room-homepage",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
+
   {
     name: "Stats Preview Component",
-    desc: "Stat display made with vite, react and tailwind",
+    desc: "Stat display made with Vite, React and Tailwind",
     mobileimage: "./web/stats preview component mobile.png",
     desktopimage: "./web/stats preview component desktop.png",
     liveurl: "https://jayaey.github.io/stats-preview-card-component-main/",
@@ -132,16 +164,6 @@ export const webData = [
     technologies: ["HTML", "CSS"],
   },
   {
-    name: "Social Links Display",
-    desc: "Social media reference landing page made with vanilla HTML, CSS",
-    mobileimage: "./web/social links display mobile.png",
-    desktopimage: "./web/social links display desktop.png",
-    liveurl: "https://jayaey.github.io/social-links-profile/",
-    github: "https://github.com/jayAEY/social-links-profile",
-    technologies: ["HTML", "CSS"],
-  },
-  // CODEWELL PROJECTS
-  {
     name: "Newsletter Subscription",
     desc: "Popup for and email subscription. Made with vanilla HTML, CSS and JavaScript",
     mobileimage: "./web/newsletter popup mobile.png",
@@ -151,12 +173,12 @@ export const webData = [
     technologies: ["HTML", "CSS"],
   },
   {
-    name: "Hover Menu",
-    desc: "Landing Page with a menu that shows when you hover over a nav link. Made with vanilla HTML, CSS and JavaScript",
-    mobileimage: "./web/hover menu mobile.png",
-    desktopimage: "./web/hover menu desktop.png",
-    liveurl: "https://jayaey.github.io/ondeck-landing-page/",
-    github: "https://github.com/jayAEY/ondeck-landing-page",
+    name: "Snipper Landing Page",
+    desc: "Responsive landing Page made vanilla HTML, CSS and JavaScript",
+    mobileimage: "./web/snipper landing page mobile.png",
+    desktopimage: "./web/snipper landing page desktop.png",
+    liveurl: "https://jayaey.github.io/snipper-landing-page/",
+    github: "https://github.com/jayAEY/snipper-landing-page",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -176,14 +198,5 @@ export const webData = [
     liveurl: "https://jayaey.github.io/comment-module/",
     github: "https://github.com/jayAEY/comment-module",
     technologies: ["HTML", "CSS"],
-  },
-  {
-    name: "Snipper Landing Page",
-    desc: "Responsive landing Page made vanilla HTML, CSS and JavaScript",
-    mobileimage: "./web/snipper landing page mobile.png",
-    desktopimage: "./web/snipper landing page desktop.png",
-    liveurl: "https://jayaey.github.io/snipper-landing-page/",
-    github: "https://github.com/jayAEY/snipper-landing-page",
-    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];

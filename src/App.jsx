@@ -1,5 +1,3 @@
-//add animations to filters?
-
 import { useState, useEffect } from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
@@ -26,18 +24,19 @@ function App() {
   const [filters, setFilters] = useState([]);
 
   function handleWebOrGraphics(elem) {
+    console.log(filters.length);
+    setFilters([]);
     // checks if button matches state
     if (elem.id != webOrGraphics) {
       let webFilter = document.querySelector("#web-filter");
       let graphicsFilter = document.querySelector("#graphics-filter");
       let projectsLabel = document.querySelector(".projects-label");
-      let techFilters = document.querySelector("#tech-filters");
 
-      // animate projects label and tech filters
+      // animate projects label and
       projectsLabel.style.transform = "translateX(-2000px)";
       setTimeout(() => {
         projectsLabel.style.transform = "translateX(0px)";
-      }, 200);
+      }, 250);
 
       // set new state and handles style changes to show "active section"
       if (elem.id == "web-filter") {
@@ -46,34 +45,14 @@ function App() {
         webFilter.style.backgroundColor = "var(--light-gray)";
         graphicsFilter.style.color = "var(--light-gray)";
         graphicsFilter.style.backgroundColor = "var(--white)";
-        techFilters.style.display = "flex";
-        setTimeout(() => {
-          techFilters.style.transform = "translateX(0px)";
-        }, 150);
       }
       if (elem.id == "graphics-filter") {
         setWebOrGraphics("graphics-filter");
-        // setFilters([]);
         graphicsFilter.style.color = "var(--yellow)";
         graphicsFilter.style.backgroundColor = "var(--light-gray)";
         webFilter.style.color = "var(--light-gray)";
         webFilter.style.backgroundColor = "var(--white)";
-        techFilters.style.display = "none";
-        techFilters.style.transform = "translateX(-2000px)";
       }
-    }
-  }
-
-  function handleFilters(elem) {
-    let filter = elem.innerHTML;
-    if (!filters.includes(filter)) {
-      setFilters(filters.concat(filter));
-      elem.style.backgroundColor = "var(--light-gray)";
-      elem.style.color = "var(--yellow)";
-    } else if (filters.includes(filter)) {
-      setFilters(filters.filter((e) => e !== filter));
-      elem.style.backgroundColor = "var(--white)";
-      elem.style.color = "var(--light-gray)";
     }
   }
 
@@ -81,11 +60,14 @@ function App() {
     let projectsLabel = document.querySelector(".projects-label");
     let nav = document.querySelector("nav");
     let techFilters = document.querySelector("#tech-filters");
+    let projects = document.querySelector("#projects");
 
     if (clicked == "") {
+      //brings project section up for web
+      webOrGraphics == "web-filter" && (projects.style.marginTop = "-80px");
       //"exit" animation and set state
       projectsLabel.style.transform = "translateX(-2000px)";
-      techFilters.style.transform = "translateX(-2000px)";
+      techFilters && (techFilters.style.transform = "translateX(-2000px)");
       nav.style.transform = "translateX(-2000px)";
       elem.parentElement.style.transform = "translateX(-2000px)";
       setTimeout(() => {
@@ -104,8 +86,10 @@ function App() {
     } else {
       //"exit" animation and set state
       setTimeout(() => {
+        //brings project section down if web
+        webOrGraphics == "web-filter" && (projects.style.marginTop = 0);
         projectsLabel.style.transform = "translateX(0px)";
-        techFilters.style.transform = "translateX(0px)";
+        techFilters && (techFilters.style.transform = "translateX(0px)");
         nav.style.transform = "translateX(0px)";
         elem.parentElement.parentElement.style.transform = "translateX(0px)";
         setClicked("");
@@ -288,7 +272,12 @@ function App() {
       <h2 className="projects-label">
         {webOrGraphics == "web-filter" ? "Web Development" : "Graphic Design"}
       </h2>
-      <TechFilters handleFilters={handleFilters} />
+      {webOrGraphics == "web-filter" && (
+        <TechFilters
+          filters={filters}
+          setFilters={setFilters}
+        />
+      )}
       <Projects
         title="Project"
         lineAnimation={lineAnimation}

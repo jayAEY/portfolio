@@ -1,13 +1,64 @@
 import Project from "./project";
 import ProjectExpanded from "./projectExpanded";
+import TechFilters from "./techFilters";
 
 const Projects = (props) => {
   let projectsReturn =
-    // filters if tech filters and web filter are active
-    props.filters.length > 0 && props.webOrGraphics == "web-filter"
-      ? Object.entries(props.data).map(
-          (e) =>
-            //checks if project has every filter
+    props.webOrGraphics == "graphics-filter"
+      ? //display graphics projects
+        Object.entries(props.data).map((e) => (
+          <Project
+            name={e[1].name}
+            key={e[1].name}
+            desc={e[1].desc}
+            mobileimage={e[1].mobileimage}
+            desktopimage={e[1].desktopimage}
+            extraimages={e[1].extraimages}
+            liveurl={e[1].liveurl}
+            github={e[1].github}
+            lineAnimation={props.lineAnimation}
+            projectsLabel={props.projectsLabel}
+            projectClick={props.projectClick}
+            technologies={props.technologies}
+          />
+        ))
+      : //displays web projects
+        Object.entries(props.data).map((e) =>
+          props.filters.length == 0 ? (
+            // display for web projects if no filters are active
+            e[1].section ? (
+              <section
+                className="section-text"
+                key={e[1].section}
+              >
+                <h3 className="section-name">{e[1].section}</h3>
+                <p
+                  className="section-description
+                "
+                >
+                  {e[1].desc}
+                </p>
+              </section>
+            ) : (
+              <Project
+                name={e[1].name}
+                key={e[1].name}
+                desc={e[1].desc}
+                mobileimage={e[1].mobileimage}
+                desktopimage={e[1].desktopimage}
+                extraimages={e[1].extraimages}
+                liveurl={e[1].liveurl}
+                github={e[1].github}
+                lineAnimation={props.lineAnimation}
+                projectsLabel={props.projectsLabel}
+                projectClick={props.projectClick}
+                technologies={props.technologies}
+              />
+            )
+          ) : (
+            // handle filters
+            //  checks if project has every filter
+            !e[1].section &&
             props.filters.every((filter) =>
               e[1].technologies.includes(filter)
             ) && (
@@ -26,24 +77,8 @@ const Projects = (props) => {
                 technologies={props.technologies}
               />
             )
-        )
-      : // returns all projects if no filter
-        Object.entries(props.data).map((e) => (
-          <Project
-            name={e[1].name}
-            key={e[1].name}
-            desc={e[1].desc}
-            mobileimage={e[1].mobileimage}
-            desktopimage={e[1].desktopimage}
-            extraimages={e[1].extraimages}
-            liveurl={e[1].liveurl}
-            github={e[1].github}
-            lineAnimation={props.lineAnimation}
-            projectsLabel={props.projectsLabel}
-            projectClick={props.projectClick}
-          />
-        ));
-
+          )
+        );
   let expandedReturn = (
     <ProjectExpanded
       name={props.clicked.name}
@@ -60,7 +95,6 @@ const Projects = (props) => {
       lightboxActive={props.lightboxActive}
     />
   );
-
   return (
     <section
       id="projects"

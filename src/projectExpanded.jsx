@@ -59,7 +59,9 @@ const ProjectExpanded = (props) => {
       <AiOutlineClose
         className="close-button"
         onClick={(e) => props.projectClick(e.target)}
+        onKeyUp={(e) => e.key == "Enter" && props.projectClick(e.target)}
         title="Close"
+        tabIndex={0}
       />
       <h2 onMouseOver={(e) => props.lineAnimation(e.target)}> {props.name}</h2>
       <p>{props.desc}</p>

@@ -1,7 +1,19 @@
 import React from "react";
 
 const TechFilters = (props) => {
-  let handleFilters = props.handleFilters;
+  let filters = props.filters;
+  function handleFilters(elem) {
+    let filter = elem.innerHTML;
+    if (!filters.includes(filter)) {
+      props.setFilters(filters.concat(filter));
+      elem.style.backgroundColor = "var(--light-gray)";
+      elem.style.color = "var(--yellow)";
+    } else if (filters.includes(filter)) {
+      props.setFilters(filters.filter((e) => e !== filter));
+      elem.style.backgroundColor = "var(--white)";
+      elem.style.color = "var(--light-gray)";
+    }
+  }
   return (
     <section id="tech-filters">
       <button
