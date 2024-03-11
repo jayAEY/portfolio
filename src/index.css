@@ -28,7 +28,6 @@ body {
 
   font-family: "Rubik", sans-serif;
   color: var(--light-gray);
-  padding: 5px;
 }
 
 @keyframes expandTransition {
@@ -340,18 +339,18 @@ nav button {
 }
 
 #lightbox {
-  position: fixed;
+  position: absolute;
   display: flex;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   opacity: 1;
   z-index: 1;
   align-items: center;
   justify-content: center;
-  overflow-y: none;
+  /* overflow: hidden; */
 }
 
 #lightbox-img {

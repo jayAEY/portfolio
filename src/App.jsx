@@ -24,7 +24,6 @@ function App() {
   const [filters, setFilters] = useState([]);
 
   function handleWebOrGraphics(elem) {
-    console.log(filters.length);
     setFilters([]);
     // checks if button matches state
     if (elem.id != webOrGraphics) {
@@ -141,6 +140,7 @@ function App() {
 
   // use esc and arrow keys to control lightbox
   useEffect(() => {
+    //  automatically focus
     lightboxActive && document.querySelector("#lightbox").focus();
   }, [lightboxActive]);
 
@@ -282,7 +282,6 @@ function App() {
         title="Project"
         lineAnimation={lineAnimation}
         clicked={clicked}
-        setClicked={setClicked}
         data={webOrGraphics == "web-filter" ? webData : graphicsData}
         projectsLabel={webOrGraphics}
         projectClick={projectClick}

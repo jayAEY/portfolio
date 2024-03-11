@@ -16,6 +16,8 @@
 - filtering component?✖️✔️
 - fix scroll behavior or make lightbox appear wherever clicked
 - change line widths to min-content?✖️
-- fix shadow cut off at bottom✖️
+- fix shadow cut off at bottom✔️
 - esc button functionality?✔️
+- add/fix d3.js projects
+- better names for projects?
  */

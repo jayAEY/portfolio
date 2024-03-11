@@ -54,12 +54,18 @@ const ProjectExpanded = (props) => {
     <div
       className="project-expand"
       tabIndex={0}
-      onKeyUp={(e) => e.key == "Escape" && props.projectClick(e.target)}
+      onKeyUp={(e) =>
+        e.key == "Escape" &&
+        props.projectClick(document.querySelector(".close-button"))
+      }
     >
       <AiOutlineClose
         className="close-button"
         onClick={(e) => props.projectClick(e.target)}
-        onKeyUp={(e) => e.key == "Enter" && props.projectClick(e.target)}
+        onKeyUp={(e) =>
+          (e.key == "Escape" || e.key == "Enter") &&
+          props.projectClick(e.target)
+        }
         title="Close"
         tabIndex={0}
       />
