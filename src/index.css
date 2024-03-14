@@ -172,6 +172,7 @@ nav {
   display: flex;
   gap: 20px;
   padding: 15px 0px;
+  max-width: 500px;
   color: var(--light-gray);
   font-weight: 900;
   transition: all 0.5s ease-in-out;
@@ -187,6 +188,8 @@ nav a {
 
 nav button {
   display: block;
+  width: 150px;
+  height: 30px;
   padding: 6px 10px;
   background-color: var(--white);
   z-index: 0;
@@ -203,13 +206,12 @@ nav button {
 
 #web-filter:hover,
 #graphics-filter:hover {
-  scale: 1.02;
   filter: brightness(0.75);
 }
 
 #tech-filters {
   display: flex;
-  max-width: 340px;
+  max-width: 400px;
   margin: 10px;
   gap: 5px;
   justify-content: center;
@@ -229,7 +231,6 @@ nav button {
 }
 
 .tech-filter:hover {
-  scale: 1.02;
   filter: brightness(0.75);
   cursor: pointer;
 }
@@ -288,6 +289,10 @@ nav button {
   max-width: 350px;
   margin: 20px 0;
   animation: var(--animation-slide-in);
+}
+
+.section-description {
+  text-align: justify;
 }
 
 .section-name {

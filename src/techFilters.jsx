@@ -56,12 +56,6 @@ const TechFilters = (props) => {
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
       >
-        Tailwind CSS
-      </button>
-      <button
-        className="tech-filter"
-        onClick={(e) => handleFilters(e.target)}
-      >
         Bootstrap
       </button>
       <button
@@ -75,6 +69,42 @@ const TechFilters = (props) => {
         onClick={(e) => handleFilters(e.target)}
       >
         GSAP
+      </button>
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        D3.js
+      </button>
+      {/* <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        Next.js
+      </button>
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        Express
+      </button>
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        Node.js
+      </button>
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        MongoDB
+      </button> */}
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        Tailwind CSS
       </button>
     </section>
   );

@@ -1,7 +1,7 @@
 export const webData = [
   {
     section: "Web Applications",
-    desc: "Fully dynamic web pages for various interactive functions. Made with technologies, features and libraries like Vite React, various APIs, localStorage, Day.js, and shadcn/ui.",
+    desc: "Fully dynamic web pages for different interactive functions. Made with various technologies, frameworks and libraries like Vite + React, various APIs, localStorage, Day.js, Tailwind CSS, Bootstrap and shadcn/ui.",
   },
   {
     name: "Game App",
@@ -32,7 +32,7 @@ export const webData = [
   },
   {
     name: "Age Calculator",
-    desc: "Age calculator made with Vite, React and Tailwind CSS",
+    desc: "Age calculator made with Vite + React and Tailwind CSS",
     mobileimage: "./web/age calculator mobile.png",
     desktopimage: "./web/age calculator desktop.png",
     liveurl: "https://jayaey.github.io/age-calculator/",
@@ -75,9 +75,8 @@ export const webData = [
   },
   {
     section: "Misc Components",
-    desc: "These projects focused on specific features that could be used in bigger projects. Features included a filtered display, a unique navbar hover menu, and a countdown animated display with a fireworks animation.",
+    desc: "These projects focused on specific features that could be used in bigger projects. These features included a filtered display, a unique navbar hover menu, and an animated countdown display with a fireworks animation.",
   },
-
   {
     name: "Countdown Clock",
     desc: "Responsive web page with animated countdown timer. Made with mostly vanilla HTML, CSS and JavaScript. GSAP and canvas-confetti were used for the animations.",
@@ -114,7 +113,6 @@ export const webData = [
     github: "https://github.com/jayAEY/job-listings-with-filtering",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
-
   {
     name: "Social Links Display",
     desc: "Social media reference landing page made with vanilla HTML, CSS",
@@ -125,19 +123,67 @@ export const webData = [
     technologies: ["HTML", "CSS"],
   },
   {
+    section: "Data Visualization",
+    desc: "Projects that display data sets in various ways. Made with D3.js",
+  },
+  {
+    name: "Bar Chart",
+    desc: "D3.js bar chart",
+    mobileimage: "./web/bar chart mobile.png",
+    desktopimage: "./web/bar chart desktop.png",
+    liveurl: "https://jayaey.github.io/d3-bar-chart/",
+    github: "https://github.com/jayAEY/d3-bar-chart",
+    technologies: ["HTML", "CSS", "JavaScript", "D3.js"],
+  },
+  {
+    name: "Choropleth Map",
+    desc: "D3.js choropleth map",
+    mobileimage: "./web/choropleth map mobile.png",
+    desktopimage: "./web/choropleth map desktop.png",
+    liveurl: "https://jayaey.github.io/d3-choropleth-map/",
+    github: "https://github.com/jayAEY/d3-choropleth-map",
+    technologies: ["HTML", "CSS", "JavaScript", "D3.js"],
+  },
+  {
+    name: "Heat Map",
+    desc: "D3.js heat map",
+    mobileimage: "./web/heat map mobile.png",
+    desktopimage: "./web/heat map desktop.png",
+    liveurl: "https://jayaey.github.io/d3-heat-map/",
+    github: "https://github.com/jayAEY/d3-heat-map",
+    technologies: ["HTML", "CSS", "JavaScript", "D3.js"],
+  },
+  {
+    name: "Scatterplot Graph",
+    desc: "D3.js scatterplot graph",
+    mobileimage: "./web/scatterplot graph mobile.png",
+    desktopimage: "./web/scatterplot graph desktop.png",
+    liveurl: "https://jayaey.github.io/d3-scatter-plot-graph/",
+    github: "https://github.com/jayAEY/d3-scatter-plot-graph",
+    technologies: ["HTML", "CSS", "JavaScript", "D3.js"],
+  },
+  {
+    name: "Treemap Diagram",
+    desc: "D3.js treemap diagram",
+    mobileimage: "./web/treemap mobile.png",
+    desktopimage: "./web/treemap desktop.png",
+    liveurl: "https://jayaey.github.io/d3-tree-map/",
+    github: "https://github.com/jayAEY/d3-tree-map",
+    technologies: ["HTML", "CSS", "JavaScript", "D3.js"],
+  },
+  {
     section: "Layouts",
-    desc: "Webpages that display various layouts, either for the full pages, or specific parts of them. These projects were typically designed focused and were meant to display various design possibilities ",
+    desc: "Webpages that display various layouts, either for the full pages, or specific parts of them. These projects were design focused and were meant to display various design possibilities without the use of libraries",
   },
   {
     name: "Room Landing Page",
-    desc: "Responive landing page with a precise layout. Includes a mobile menu and image slideshow made from scratch. Made entirely with vanilla HTML, CSS and JavaScript",
+    desc: "Responsive landing page with a precise layout. Includes a mobile menu and image slideshow made from scratch. Made entirely with vanilla HTML, CSS and JavaScript",
     mobileimage: "./web/room landing page mobile.png",
     desktopimage: "./web/room landing page desktop.png",
     liveurl: "https://jayaey.github.io/room-homepage/",
     github: "https://github.com/jayAEY/room-homepage",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
-
   {
     name: "Stats Preview Component",
     desc: "Stat display made with Vite, React and Tailwind",

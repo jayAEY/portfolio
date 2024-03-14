@@ -14,10 +14,15 @@
 - about me section for non web dev?
 - webring type of section? or just section on things
 - filtering component?✖️✔️
-- fix scroll behavior or make lightbox appear wherever clicked
+- fix scroll behavior or make lightbox appear wherever clicked ✔️
 - change line widths to min-content?✖️
 - fix shadow cut off at bottom✔️
 - esc button functionality?✔️
-- add/fix d3.js projects
+- add/fix d3.js projects✔️
 - better names for projects?
+- add dashes img names?
+- seperate about me section?
+- clean things up?
+- switch prop drilling to context?
+- modular CSS ?
  */
