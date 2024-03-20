@@ -1,20 +1,17 @@
 import { useState, useEffect } from "react";
-
-import { AiOutlineClose } from "react-icons/ai";
 import {
   FaEnvelope,
   FaGithub,
   FaFreeCodeCamp,
   FaCodepen,
-  FaArrowLeft,
-  FaArrowRight,
 } from "react-icons/fa";
 import { SiReplit } from "react-icons/si";
-import { webData } from "./webProjectsInfo.js";
-import { graphicsData } from "./graphicsProjectsInfo";
+import { webData } from "./web-projects-info.js";
+import { graphicsData } from "./graphics-projects-info.js";
 
-import Projects from "./projects.jsx";
-import TechFilters from "./techFilters.jsx";
+import Projects from "./Projects.jsx";
+import TechFilters from "./TechFilters.jsx";
+import Lightbox from "./Lightbox.jsx";
 
 function App() {
   const [clicked, setClicked] = useState("");
@@ -113,78 +110,16 @@ function App() {
     }, 500);
   }, []);
 
-  //lightbox feature
-  function imgClick(img) {
-    setLightboxActive(true);
-    setLightboxImg(img.src);
-  }
-
-  function lightboxArrows(arrow) {
-    let currentImg = document.querySelector("#lightbox-img");
-    let projectImgs = document.querySelectorAll(".graphics-img");
-    projectImgs.forEach((img, index) => {
-      if (img.src == currentImg.src) {
-        if (arrow.id == "right-arrow") {
-          index == projectImgs.length - 1
-            ? setLightboxImg(projectImgs[0].src)
-            : setLightboxImg(projectImgs[index + 1].src);
-        }
-        if (arrow.id == "left-arrow") {
-          index == 0
-            ? setLightboxImg(projectImgs[projectImgs.length - 1].src)
-            : setLightboxImg(projectImgs[index - 1].src);
-        }
-      }
-    });
-  }
-
-  // use esc and arrow keys to control lightbox
-  useEffect(() => {
-    //  automatically focus
-    lightboxActive && document.querySelector("#lightbox").focus();
-  }, [lightboxActive]);
-
-  function handleKeyUps(e) {
-    let leftArrow = document.querySelector("#left-arrow");
-    let rightArrow = document.querySelector("#right-arrow");
-    if (e.key == "Escape" && projectClick) {
-      setLightboxActive(false);
-    }
-    if (e.key == "ArrowRight" && lightboxActive == true) {
-      lightboxArrows(rightArrow);
-    }
-    if (e.key == "ArrowLeft" && lightboxActive == true) {
-      lightboxArrows(leftArrow);
-    }
-  }
-
   return (
     <>
       {lightboxActive && (
-        <div
-          id="lightbox"
-          tabIndex={0}
-          onKeyUp={(e) => handleKeyUps(e)}
-        >
-          <AiOutlineClose
-            className="close-button"
-            onClick={() => setLightboxActive(false)}
-          />
-          <FaArrowLeft
-            className="arrow-button"
-            id="left-arrow"
-            onClick={(e) => lightboxArrows(e.target)}
-          />
-          <FaArrowRight
-            className="arrow-button"
-            id="right-arrow"
-            onClick={(e) => lightboxArrows(e.target)}
-          />
-          <img
-            id="lightbox-img"
-            src={lightboxImg}
-          ></img>
-        </div>
+        <Lightbox
+          lightboxActive={lightboxActive}
+          setLightboxActive={setLightboxActive}
+          lightboxImg={lightboxImg}
+          setLightboxImg={setLightboxImg}
+          projectClick={projectClick}
+        />
       )}
       <header>
         <h1
@@ -285,8 +220,9 @@ function App() {
         data={webOrGraphics == "web-filter" ? webData : graphicsData}
         projectsLabel={webOrGraphics}
         projectClick={projectClick}
-        imgClick={imgClick}
         lightboxActive={lightboxActive}
+        setLightboxActive={setLightboxActive}
+        setLightboxImg={setLightboxImg}
         filters={filters}
         webOrGraphics={webOrGraphics}
       />

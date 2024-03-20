@@ -5,6 +5,12 @@ import { FaGithub, FaLink } from "react-icons/fa";
 const ProjectExpanded = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  // activate lightbox
+  function imgClick(img) {
+    props.setLightboxActive(true);
+    props.setLightboxImg(img.src);
+  }
+
   // line animation on load
   useEffect(() => {
     props.lineAnimation(document.querySelector(".project-expand h2"));
@@ -38,7 +44,7 @@ const ProjectExpanded = (props) => {
       className={`${
         props.projectsLabel == "web-filter" ? "web" : "graphics"
       }-img`}
-      onClick={(e) => props.imgClick(e.target)}
+      onClick={(e) => imgClick(e.target)}
     ></img>,
   ];
   // handle extra images for graphics projects
@@ -102,7 +108,7 @@ const ProjectExpanded = (props) => {
           src={image}
           alt={`Another screenshot of ${props.name}`}
           key={`${props.name} ${index} `}
-          onClick={(e) => props.imgClick(e.target)}
+          onClick={(e) => imgClick(e.target)}
           tabIndex={0}
         ></img>
       ))}

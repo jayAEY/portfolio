@@ -16,7 +16,7 @@ const TechFilters = (props) => {
   }
   return (
     <section id="tech-filters">
-      <button
+      {/* <button
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
       >
@@ -27,7 +27,7 @@ const TechFilters = (props) => {
         onClick={(e) => handleFilters(e.target)}
       >
         CSS
-      </button>
+      </button> */}
       <button
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
@@ -76,7 +76,7 @@ const TechFilters = (props) => {
       >
         D3.js
       </button>
-      {/* <button
+      <button
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
       >
@@ -88,6 +88,7 @@ const TechFilters = (props) => {
       >
         Express
       </button>
+
       <button
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
@@ -99,12 +100,18 @@ const TechFilters = (props) => {
         onClick={(e) => handleFilters(e.target)}
       >
         MongoDB
-      </button> */}
+      </button>
       <button
         className="tech-filter"
         onClick={(e) => handleFilters(e.target)}
       >
         Tailwind CSS
+      </button>
+      <button
+        className="tech-filter"
+        onClick={(e) => handleFilters(e.target)}
+      >
+        Supabase
       </button>
     </section>
   );

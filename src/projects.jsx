@@ -1,6 +1,6 @@
-import Project from "./project";
-import ProjectExpanded from "./projectExpanded";
-import TechFilters from "./techFilters";
+import Project from "./Project";
+import ProjectExpanded from "./ProjectExpanded";
+import TechFilters from "./TechFilters";
 
 const Projects = (props) => {
   let projectsReturn =
@@ -91,8 +91,9 @@ const Projects = (props) => {
       lineAnimation={props.lineAnimation}
       projectsLabel={props.projectsLabel}
       projectClick={props.projectClick}
-      imgClick={props.imgClick}
       lightboxActive={props.lightboxActive}
+      setLightboxActive={props.setLightboxActive}
+      setLightboxImg={props.setLightboxImg}
     />
   );
   return (

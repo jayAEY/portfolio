@@ -1,4 +1,4 @@
-/* PORTFOLIO FEATURES
+ PORTFOLIO FEATURES
  
 - group css styles ✔️
 - animation for expanding project?✔️
@@ -25,4 +25,5 @@
 - clean things up?
 - switch prop drilling to context?
 - modular CSS ?
- */
+ 
+ 
