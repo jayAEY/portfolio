@@ -4,12 +4,12 @@ export const webData = [
     desc: "Fully dynamic web pages for different interactive functions. Made with various technologies, frameworks and libraries like Vite + React, various APIs, localStorage, Day.js, Tailwind CSS, Bootstrap and shadcn/ui.",
   },
   {
-    name: "Game App",
+    name: "Playpedia",
     desc: "App that allows for keeping a video game backlog and completion list. Also allows for searching and displaying info on games. Made with RAWG.io API - API for game info. Made with React, Tailwind CSS, Vite, shadcn/ui, TypeScript",
     mobileimage: "./web/game app mobile.png",
     desktopimage: "./web/game app desktop.png",
-    liveurl: "https://jayaey.github.io/game-app/",
-    github: "https://github.com/jayAEY/game-app",
+    liveurl: "https://playpedia.vercel.app/",
+    github: "https://github.com/jayAEY/playpedia",
     technologies: [
       "HTML",
       "CSS",
@@ -22,16 +22,16 @@ export const webData = [
     ],
   },
   {
-    name: "Spending App",
-    desc: "Responsive web page that displays an expense chart with dynamically sized bars. Allows for inputting and saving spending and balance data. Made entirely with vanilla HTML, CSS and JavaScript",
+    name: "Wallet Watcher",
+    desc: "Responsive web app that displays an expense chart with dynamically sized bars. Allows for inputting and saving spending and balance data. Made entirely with vanilla HTML, CSS and JavaScript",
     mobileimage: "./web/expense chart mobile.png",
     desktopimage: "./web/expense chart desktop.png",
-    liveurl: "https://jayaey.github.io/expense-chart-component/",
+    liveurl: "https://wallet-watcher-frontend.vercel.app/",
     github: "https://github.com/jayAEY/expense-chart-component",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    name: "Age Calculator",
+    name: "Lifespanner",
     desc: "Age calculator made with Vite + React and Tailwind CSS",
     mobileimage: "./web/age calculator mobile.png",
     desktopimage: "./web/age calculator desktop.png",
@@ -47,7 +47,7 @@ export const webData = [
     ],
   },
   {
-    name: "Github User Display",
+    name: "Code Connect",
     desc: "App that displays github user info. Allows for searching. Made with vanilla HTML, CSS, JavaScript and the Github REST API",
     mobileimage: "./web/github user display mobile.png",
     desktopimage: "./web/github user display desktop.png",
@@ -56,7 +56,7 @@ export const webData = [
     technologies: ["HTML", "CSS", "JavaScript", "API"],
   },
   {
-    name: "Time Display",
+    name: "Zone Sync",
     desc: "App that displays time based on a certain Canadian timezone. The timezone can be changed. Made with HTML, CSS, Bootstrap, JavaScript, Micromodal.js and Day.js",
     mobileimage: "./web/time display mobile.png",
     desktopimage: "./web/time display desktop.png",
@@ -65,7 +65,7 @@ export const webData = [
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
   },
   {
-    name: "Quote Generator",
+    name: "Quotopia",
     desc: "Advice generator app that retrieves random advice from an API. Made entirely with vanilla HTML, CSS and JavaScript",
     mobileimage: "./web/quote generator mobile.png",
     desktopimage: "./web/quote generator desktop.png",
