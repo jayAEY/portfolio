@@ -136,7 +136,8 @@ function App() {
           <p>
             {/* Self-taught front-end web developer and graphic designer based in
             Vancouver, Canada */}
-            Full-Stack Developer from Canada 🇨🇦
+            Full-Stack Developer from Canada 🇨🇦 <br />
+            This website was made entirely with regular React and CSS
           </p>
           <div className="link-icons">
             <a
