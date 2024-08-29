@@ -134,8 +134,9 @@ function App() {
           title="Bio"
         >
           <p>
-            Self-taught front-end web developer and graphic designer based in
-            Vancouver, Canada
+            {/* Self-taught front-end web developer and graphic designer based in
+            Vancouver, Canada */}
+            Full-Stack Developer from Canada 🇨🇦
           </p>
           <div className="link-icons">
             <a
